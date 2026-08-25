@@ -1,0 +1,45 @@
+services:
+  - type: worker
+    name: shunday-bot
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python shunday.py
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: BOT_TOKEN
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: ADMIN_GROUP
+        sync: false
+      - key: ADMINS
+        sync: false
+      - key: ORDER_CHANNEL
+        sync: false
+      - key: CARD_NUMBER
+        sync: false
+      - key: CARD_HOLDER
+        sync: false
+      - key: TON_SEED
+        sync: false
+      - key: TONAPI_KEY
+        sync: false
+      - key: V5R1
+        sync: false
+      - key: stel_ssid
+        sync: false
+      - key: stel_dt
+        sync: false
+      - key: stel_token
+        sync: false
+      - key: stel_ton_token
+        sync: false
